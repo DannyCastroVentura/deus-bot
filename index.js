@@ -14,7 +14,12 @@ const client = new Discord.Client();
 
 const prefix = "DEUS ";
 
-client.on("message", (message) => {    
+client.on("message", (message) => {
+    
+    if(message.includes("caralho")){
+        message.reply("filho, não digas asneiras.");
+    }
+
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     
