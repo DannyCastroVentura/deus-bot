@@ -1,4 +1,4 @@
-# deus-bot
+# Bot Discord Deus
 
 Para alterar:
 
