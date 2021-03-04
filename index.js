@@ -14,12 +14,7 @@ const client = new Discord.Client();
 
 const prefix = "DEUS ";
 
-client.on("message", (message) => {
-    
-    const verificar = message;
-
-    message.reply(message);
-
+client.on("message", (message) => {    
     if(message.author.bot) return;
     if(!message.content.startsWith(prefix)) return;
     
@@ -30,10 +25,7 @@ client.on("message", (message) => {
 
     if(command === ""){
         message.reply("o que queres meu filho?");
-    }
-
-
-    if(command === "ping"){
+    } else if(command === "ping"){
         const timeTaken = Date.now() - message.createdTimestamp;
         message.reply("meu filho, o teu ping tem latência de " + timeTaken + "ms!");
     } else if(command === "soma"){
