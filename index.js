@@ -16,7 +16,8 @@ const prefix = "DEUS ";
 
 client.on("message", (message) => {
     
-    if(message.includes("caralho")){
+    const mensagem = message.toString();
+    if(mensagem.includes("caralho")){
         message.reply("filho, não digas asneiras.");
     }
 
