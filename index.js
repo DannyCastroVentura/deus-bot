@@ -1,10 +1,6 @@
-const Discord = require("discord.js");
-const config = require("./config.json");
-const http = require("http");
 
-http-http.createServer((request, response) => {
-    
-});
+
+const Discord = require("discord.js");
 
 const client = new Discord.Client();
 
@@ -63,5 +59,5 @@ client.on("message", (message) => {
 });
 
 
-client.login(config.BOT_TOKEN);
+client.login(process.env.discord_key);
 
