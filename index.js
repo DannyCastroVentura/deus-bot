@@ -1,4 +1,4 @@
-
+const Config = require("./config.json");
 
 const Discord = require("discord.js");
 
@@ -58,6 +58,11 @@ client.on("message", (message) => {
     }
 });
 
+if(Config)
+{
+    client.login(Config.BOT_TOKEN);
+}else{
+    client.login(process.env.discord_key);
+}
 
-client.login(process.env.discord_key);
-
+//client.login(Config?Config.BOT_TOKEN:process.env.discord_key);
