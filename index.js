@@ -17,7 +17,7 @@ const prefix = "DEUS ";
 client.on("message", (message) => {
     
     const mensagem = message.toString();
-    if(mensagem.includes("caralho") || mensagem.includes("merda") || mensagem.includes("puta") || mensagem.includes("cabra") || mensagem.includes("vaca") || mensagem.includes("fodasse") || mensagem.includes("foder") || mensagem.includes("cabrão")){
+    if(mensagem.includes("caralho") || mensagem.includes("merda") || mensagem.includes("puta") || mensagem.includes("cabra") || mensagem.includes("vaca") || mensagem.includes("fodasse") || mensagem.includes("foder") || mensagem.includes("fuder") || mensagem.includes("caralio") || mensagem.includes("cabrão")){
         message.reply("filho, não digas asneiras.");
     }
 
