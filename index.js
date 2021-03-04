@@ -16,6 +16,14 @@ const prefix = "DEUS ";
 
 client.on("message", (message) => {
     
+    const verificar = message;
+
+    message.reply(message);
+
+    if(message.author.bot) return;
+    if(!message.content.startsWith(prefix)) return;
+    
+
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
@@ -24,9 +32,7 @@ client.on("message", (message) => {
         message.reply("o que queres meu filho?");
     }
 
-    if(message.author.bot) return;
-    if(!message.content.startsWith(prefix)) return;
-    
+
     if(command === "ping"){
         const timeTaken = Date.now() - message.createdTimestamp;
         message.reply("meu filho, o teu ping tem latência de " + timeTaken + "ms!");
