@@ -19,7 +19,7 @@ client.on("message", (message) => {
     const mensagem = message.toString();
     if(mensagem.includes("caralho") || mensagem.includes("merda") || mensagem.includes("puta") || mensagem.includes("cabra") || mensagem.includes("vaca") || mensagem.includes("fodasse") || mensagem.includes("foder") || mensagem.includes("fuder") || mensagem.includes("cabrão")){
         message.reply("filho, não digas asneiras.");
-    }else if(mensagem.includes("pixa") || mensagem.includes("pila") || mensagem.includes("caralho")){
+    }else if(mensagem.includes("pixa") || mensagem.includes("pila") || mensagem.includes("caralho") || mensagem.includes("picha")){
         message.reply("filho, diz-se pénis.");
     }else if(mensagem.includes("cona") || mensagem.includes("kona") || mensagem.includes("pussy") || mensagem.includes("paxaxa") || mensagem.includes("paxaxinha") || mensagem.includes("grelo")){
         message.reply("filho, diz-se vagina.");
