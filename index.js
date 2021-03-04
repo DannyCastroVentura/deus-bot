@@ -12,7 +12,7 @@ const Discord = require("discord.js");
 
 const client = new Discord.Client();
 
-const prefix = "deus ";
+const prefix = "DEUS ";
 
 client.on("message", (message) => {
     
