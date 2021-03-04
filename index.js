@@ -1,4 +1,12 @@
-const Config = require("./config.json");
+
+let Config;
+
+try{
+    Config = require("./config.json");
+}catch(err)
+{
+    Config = undefined;
+}
 
 const Discord = require("discord.js");
 
