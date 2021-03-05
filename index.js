@@ -31,7 +31,7 @@ client.on("message", (message) => {
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
 
-    if(!state && (mensagem !== "DEUS volta a terra"))
+    if(!state && (mensagem !== "deus volta a terra"))
     {
         return;
     }
@@ -99,7 +99,7 @@ client.on("message", (message) => {
                 {
                     message.reply("não te ponhas com brincadeiras que tas aqui tas a ter um irmãozinho. :face_with_symbols_over_mouth:");
                 }
-            }else if(args[0] !== null){
+            }else if(args[0] !== undefined){
                 const tudo = command + " " + args[0].toLowerCase();
     
                 if(tudo === "quem manda?"){
@@ -127,7 +127,7 @@ client.on("message", (message) => {
                 console.log(tudo);
                 if(tudo === "volta a terra"){
                     state = true;
-                    message.reply("Quando me quiserem de volta digam: «volta a terra»");
+                    message.reply("voltei, o que desejas filho meu?");
                 }
             }
             
