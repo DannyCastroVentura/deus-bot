@@ -32,12 +32,13 @@ client.on("message", (message) => {
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
-
+    
+    /*
     if(!state && (mensagem !== "deus volta a terra"))
     {
         return;
     }
-
+    */
     const numeroDaMensagem = Math.round( Math.random() * 2 );
     const comecaComPrefixo = message.content.startsWith(prefix);
 
