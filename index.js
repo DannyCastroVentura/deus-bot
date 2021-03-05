@@ -25,10 +25,12 @@ const respostasAoDunkMemer = ['pls boobs', 'pls ass', 'pls porn', 'pls tits', 'p
 
 client.on("message", (message) => {
 
+    const mensagem = message.toString().toLowerCase();
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
-    if(!state && command !== "volta a terra")
+
+    if(!state && mensagem !== "volta a terra")
     {
         return;
     }
@@ -36,7 +38,6 @@ client.on("message", (message) => {
     const numeroDaMensagem = Math.round( Math.random() * 2 );
     const comecaComPrefixo = message.content.startsWith(prefix);
 
-    const mensagem = message.toString().toLowerCase();
 
     let tiposDeMensagens = [];
 
@@ -111,13 +112,22 @@ client.on("message", (message) => {
             message.reply(novaString);
         },
         "adeus": () => message.reply("vais embora tão cedo?"),
-        "volta para o ceu": () => {
-            state = false;
-            message.reply("Quando me quiserem de volta digam: «volta a terra»");
-        },
-        "volta a terra": () => {
-            state = true;
-            message.reply("voltei, o que quereis?");
+        "volta": () => {
+            if(args[2] !== null)
+            {
+                const tudo = command + " " + args[0].toLowerCase() + " " + args[1].toLowerCase() + " " + args[2].toLowerCase();
+                if(tudo === "volta para o ceu"){
+                    state = false;
+                    message.reply("Quando me quiserem de volta digam: «volta a terra»");
+                }
+            }else if(args[1] !== null){
+                const tudo = command + " " + args[0].toLowerCase() + " " + args[1].toLowerCase();
+                if(tudo === "volta a terra"){
+                    state = true;
+                    message.reply("Quando me quiserem de volta digam: «volta a terra»");
+                }
+            }
+            
         },
         "ajudai": () => {
             message.reply("meu filho, eu ajudar-te-ei nisto:\n \
