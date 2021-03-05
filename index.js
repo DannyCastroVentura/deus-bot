@@ -112,7 +112,7 @@ client.on("message", (message) => {
             message.reply(novaString);
         },
         "adeus": () => message.reply("vais embora tão cedo?"),
-        "volta para o céu": () => {
+        "volta para o ceu": () => {
             state = false;
             message.reply("Quando me quiserem de volta digam: «volta a terra»");
         },
