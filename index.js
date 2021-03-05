@@ -32,6 +32,9 @@ client.on("message", (message) => {
     }else if(mensagem.includes("desculpa") || mensagem.includes("perdão")){
         //perdão
         message.reply("estás perdoado.");
+    }else if(mensagem.includes("deus")){
+        //deus
+        message.reply("chamaste?");
     }
 
     if(message.author.bot) return;
