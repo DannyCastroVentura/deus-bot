@@ -14,7 +14,7 @@ const client = new Discord.Client();
 
 const prefix = "DEUS ";
 
-include("./lib/arrays.js");
+require("./lib/arrays.js");
 
 
 client.on("message", (message) => {
