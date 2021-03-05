@@ -9,18 +9,14 @@ try{
 }
 
 const Discord = require("discord.js");
-const Commando = require("discord.js-commando");
 
 const client = new Discord.Client();
-const bot = new Commando.Client();
-
-bot.on('ready', () => {
-    console.log("Ready");
-});
 
 const prefix = "DEUS ";
 
 let state = true;
+
+console.log("Started");
 
 const asneiras = ['merda', 'chupaimos', 'puta', 'cabra', 'vaca', 'fodasse', 'foder', 'fuder', 'cabrão', 'crl', 'mrd', 'fodo'];
 const pilas = ['pixa', 'pila', 'caralho', 'picha'];
