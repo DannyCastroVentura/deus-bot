@@ -100,7 +100,6 @@ client.on("message", (message) => {
             }
         },
         "diz": () => {
-            args.shift();
             const novaString = args.join(" ");
             message.reply(novaString);
         },
