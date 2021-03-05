@@ -16,7 +16,7 @@ const prefix = "DEUS ";
 
 let state = true;
 
-const asneiras = ['merda', 'chupaimos', 'puta', 'cabra', 'vaca', 'fodasse', 'foder', 'fuder', 'cabrão', 'crl', 'mrd'];
+const asneiras = ['merda', 'chupaimos', 'puta', 'cabra', 'vaca', 'fodasse', 'foder', 'fuder', 'cabrão', 'crl', 'mrd', 'fodo'];
 const pilas = ['pixa', 'pila', 'caralho', 'picha'];
 const conas = ['cona', 'kona', 'pussy', 'paxaxa', 'paxaxinha', 'grelo'];
 const ofensa = ['gay', 'homosexual', 'paneleiro', 'lesbica'];
@@ -28,7 +28,6 @@ client.on("message", (message) => {
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
-    message.reply(command);
     if(!state && command !== "volta a terra")
     {
         return;
