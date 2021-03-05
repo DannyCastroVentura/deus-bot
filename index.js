@@ -101,7 +101,7 @@ client.on("message", (message) => {
         },
         "diz": () => {
             args.shift();
-            args.join(" ");
+            args = args.join(" ");
             message.reply(args);
         },
         "adeus": () => message.reply("vais embora tão cedo?"),
