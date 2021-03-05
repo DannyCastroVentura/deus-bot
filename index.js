@@ -26,11 +26,12 @@ const respostasAoDunkMemer = ['pls boobs', 'pls ass', 'pls porn', 'pls tits', 'p
 client.on("message", (message) => {
 
     const mensagem = message.toString().toLowerCase();
+    console.log(mensagem);
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
 
-    if(!state && mensagem !== "DEUS volta a terra")
+    if(!state && (mensagem !== "DEUS volta a terra"))
     {
         return;
     }
