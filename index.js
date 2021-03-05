@@ -77,7 +77,7 @@ client.on("message", (message) => {
     
     const commands = require("./lib/commands.js")(message, args, command);
 
-    Object.keys(commands).includes(command)?commands[command]():message.reply("não entendi meu filho. Faz «ajudai» para mais informações.");
+    Object.keys(commands.commands).includes(command)?commands[command]():message.reply("não entendi meu filho. Faz «ajudai» para mais informações.");
 });
 
 if(Config)
