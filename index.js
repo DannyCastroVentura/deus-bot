@@ -117,12 +117,14 @@ client.on("message", (message) => {
             if(args[2] !== undefined)
             {
                 const tudo = command + " " + args[0].toLowerCase() + " " + args[1].toLowerCase() + " " + args[2].toLowerCase();
+                console.log(tudo);
                 if(tudo === "volta para o ceu"){
                     state = false;
                     message.reply("Quando me quiserem de volta digam: «volta a terra»");
                 }
             }else if(args[1] !== undefined){
                 const tudo = command + " " + args[0].toLowerCase() + " " + args[1].toLowerCase();
+                console.log(tudo);
                 if(tudo === "volta a terra"){
                     state = true;
                     message.reply("Quando me quiserem de volta digam: «volta a terra»");
