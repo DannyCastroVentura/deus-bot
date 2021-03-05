@@ -15,7 +15,7 @@ const client = new Discord.Client();
 
 const prefix = "DEUS ";
 
-let state = true;
+//let state = true;
 
 console.log("Started");
 
@@ -75,11 +75,9 @@ client.on("message", (message) => {
     if(!comecaComPrefixo) return;
 
     
-    const commands = require("./lib/commands")(message, args, command, (newState) => {
+    const commands = require("./lib/commands")(message, args, command/*, (newState) => {
         state = newState;
-    });
-
-    console.log(state);
+    }*/);
 
     Object.keys(commands).includes(command)?commands[command]():message.reply("não entendi meu filho. Faz «ajudai» para mais informações.");
 });
