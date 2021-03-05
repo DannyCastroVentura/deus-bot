@@ -18,13 +18,13 @@ client.on("message", (message) => {
     
     const mensagem = message.toString().toLowerCase();
     if(mensagem.includes("caralho") || mensagem.includes("merda") || mensagem.includes("puta") || mensagem.includes("cabra") || mensagem.includes("vaca") || mensagem.includes("fodasse") || mensagem.includes("foder") || mensagem.includes("fuder") || mensagem.includes("cabrão")){
-        message.reply("filho, não digas asneiras.");
+        message.reply("filho, não digas asneiras :shushing_face: ");
     }else if(mensagem.includes("pixa") || mensagem.includes("pila") || mensagem.includes("caralho") || mensagem.includes("picha")){
-        message.reply("filho, diz-se pénis.");
+        message.reply("filho, diz-se pénis. :neutral_face: ");
     }else if(mensagem.includes("cona") || mensagem.includes("kona") || mensagem.includes("pussy") || mensagem.includes("paxaxa") || mensagem.includes("paxaxinha") || mensagem.includes("grelo")){
-        message.reply("filho, diz-se vagina.");
+        message.reply("filho, diz-se vagina. :neutral_face: ");
     }else if(mensagem.includes("desculpa")){
-        message.reply("estás perdoado.")
+        message.reply("estás perdoado. ")
     }
 
     if(message.author.bot) return;
@@ -52,10 +52,10 @@ client.on("message", (message) => {
 
             if(tudo === "quem te criou?")
             {
-                message.reply("nosso Senhor todo poderoso Daniel Ventura, é claro!");
+                message.reply("nosso Senhor todo poderoso Daniel Ventura, é claro! :crown:");
             }else if(tudo === "quem te perguntou?")
             {
-                message.reply("não te ponhas com brincadeiras que tas aqui tas a ter um irmãozinho.");
+                message.reply("não te ponhas com brincadeiras que tas aqui tas a ter um irmãozinho. :face_with_symbols_over_mouth:");
             }
         }else if(args[0] !== null){
             const tudo = command + " " + args[0].toLowerCase();
