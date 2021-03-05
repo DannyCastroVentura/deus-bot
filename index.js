@@ -8,7 +8,6 @@ try{
     Config = undefined;
 }
 
-const commands = require("./lib/commands.js");
 
 const Discord = require("discord.js");
 
@@ -75,6 +74,8 @@ client.on("message", (message) => {
     if(message.author.bot) return;
     if(!comecaComPrefixo) return;
 
+    
+    const commands = require("./lib/commands.js")(message, args, command);
 
     Object.keys(commands).includes(command)?commands[command]():message.reply("não entendi meu filho. Faz «ajudai» para mais informações.");
 });
