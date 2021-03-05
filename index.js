@@ -30,7 +30,7 @@ client.on("message", (message) => {
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
 
-    if(!state && mensagem !== "volta a terra")
+    if(!state && mensagem !== "DEUS volta a terra")
     {
         return;
     }
