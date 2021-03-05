@@ -118,7 +118,7 @@ client.on("message", (message) => {
         },
         "volta a terra": () => {
             state = true;
-            message.reply("Quando me quiserem de volta digam: «volta a terra»");
+            message.reply("voltei, o que quereis?");
         },
         "ajudai": () => {
             message.reply("meu filho, eu ajudar-te-ei nisto:\n \
