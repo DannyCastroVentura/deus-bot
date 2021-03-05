@@ -19,7 +19,7 @@ const pilas = ['pixa', 'pila', 'caralho', 'picha'];
 const conas = ['cona', 'kona', 'pussy', 'paxaxa', 'paxaxinha', 'grelo'];
 const ofensa = ['gay', 'homosexual', 'paneleiro', 'lesbica'];
 const perdao = ['desculpa', 'perdão'];
-const badalhoquices = ['boobs', 'ass', 'porn'];
+const badalhoquices = ['boobs', 'ass', 'porn', 'tits'];
 
 client.on("message", (message) => {
 
@@ -41,7 +41,7 @@ client.on("message", (message) => {
         message.reply("estás perdoado.");
     }else if(badalhoquices.find(v => (mensagem.includes(v))) !== undefined){
         //badalhoquices
-        message.reply("Deus tudo vê.");
+        message.reply(":eyes:");
     }else if(mensagem.includes("deus")){
         //deus
         message.reply("chamaste?");
