@@ -23,6 +23,8 @@ const badalhoquices = ['boobs', 'ass', 'porn', 'tits', 'booty'];
 
 client.on("message", (message) => {
 
+    const comecaComPrefixo = message.content.startsWith(prefix);
+
     const mensagem = message.toString().toLowerCase();
     if(asneiras.find(v => (mensagem.includes(v))) !== undefined){
         //asneiras
@@ -42,13 +44,13 @@ client.on("message", (message) => {
     }else if(badalhoquices.find(v => (mensagem.includes(v))) !== undefined){
         //badalhoquices
         message.reply(":eyes:");
-    }else if(mensagem.includes("deus")){
+    }else if(mensagem.includes("deus") && (!comecaComPrefixo)){
         //deus
         message.reply("chamaste?");
     }
 
     if(message.author.bot) return;
-    if(!message.content.startsWith(prefix)) return;
+    if(!comecaComPrefixo) return;
     
 
     const commandBody = message.content.slice(prefix.length);
@@ -90,8 +92,7 @@ client.on("message", (message) => {
             }
         },
         "diz": () => {
-            let mensagemAlterada = args.join(" ");
-            message.reply(mensagemAlterada);
+            message.reply(commandBody);
         },
         "adeus": () => message.reply("vais embora tão cedo?"),
         "ajudai": () => {
