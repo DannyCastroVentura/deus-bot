@@ -101,8 +101,8 @@ client.on("message", (message) => {
         },
         "diz": () => {
             args.shift();
-            args = args.join(" ");
-            message.reply(args);
+            const novaString = args.join(" ");
+            message.reply(novaString);
         },
         "adeus": () => message.reply("vais embora tão cedo?"),
         "ajudai": () => {
