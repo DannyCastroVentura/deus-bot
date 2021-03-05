@@ -81,7 +81,13 @@ client.on("message", (message) => {
         state = newState;
     }*/);
 
-    Object.keys(commands).includes(command)?commands[command]():message.reply("não entendi meu filho. Faz «ajudai» para mais informações.");
+    if(Object.keys(commands).includes(command))
+    {
+        commands[command]();
+    }else{
+        message.reply("não entendi meu filho, mas como um sábio uma vez disse: ");
+        commands["biblia"]();
+    }
 });
 
 if(Config)
