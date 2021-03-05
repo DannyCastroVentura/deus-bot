@@ -15,9 +15,9 @@ const client = new Discord.Client();
 const prefix = "DEUS ";
 
 client.on("message", (message) => {
-    
+        
     const mensagem = message.toString().toLowerCase();
-    if(mensagem.includes("caralho") || mensagem.includes("merda") || mensagem.includes("chupaimos") || mensagem.includes("puta") || mensagem.includes("cabra") || mensagem.includes("vaca") || mensagem.includes("fodasse") || mensagem.includes("foder") || mensagem.includes("fuder") || mensagem.includes("cabrão")){
+    if(mensagem.includes("merda") || mensagem.includes("chupaimos") || mensagem.includes("puta") || mensagem.includes("cabra") || mensagem.includes("vaca") || mensagem.includes("fodasse") || mensagem.includes("foder") || mensagem.includes("fuder") || mensagem.includes("cabrão")){
         //asneiras
         message.reply("não se diz asneiras...");
     }else if(mensagem.includes("pixa") || mensagem.includes("pila") || mensagem.includes("caralho") || mensagem.includes("picha")){
