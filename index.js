@@ -85,7 +85,7 @@ client.on("message", (message) => {
     {
         commands[command]();
     }else{
-        message.reply("não entendi meu filho, mas como um sábio uma vez disse: ");
+        message.reply("Não sei se entendi, mas como um sábio uma vez disse: ");
         commands["biblia"]();
     }
 });
