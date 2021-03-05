@@ -75,7 +75,10 @@ client.on("message", (message) => {
     if(!comecaComPrefixo) return;
 
     
-    const {commands, state} = require("./lib/commands")(message, args, command, state);
+    const listaDeComandosRecebidos = require("./lib/commands")(message, args, command, state);
+
+    state = listaDeComandosRecebidos.state;
+    const commands = listaDeComandosRecebidos.commands;
 
     Object.keys(commands).includes(command)?commands[command]():message.reply("não entendi meu filho. Faz «ajudai» para mais informações.");
 });
