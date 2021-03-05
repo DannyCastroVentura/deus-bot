@@ -75,7 +75,9 @@ client.on("message", (message) => {
             }
 
         }
-    } else if(command === "adeus") {
+    } else if(command === "diz") {
+        message.reply(args.toString().toLowerCase());
+    }else if(command === "adeus") {
         message.reply("vais embora tão cedo?");
     } else if(command === "ajudai") {
         message.reply("meu filho, eu ajudar-te-ei nisto:\n \
