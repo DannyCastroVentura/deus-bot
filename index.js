@@ -84,6 +84,7 @@ client.on("message", (message) => {
         message.reply("meu filho, eu ajudar-te-ei nisto:\n \
         Posso te mostrar o teu ping: «ping»;\n \
         Posso fazer umas contas de somar: «soma Arg1 Arg2 ArgN»;\n \
+        Posso dizer o que tu quiseres: «diz Arg1 Arg2 ArgN»;\n \
         E por agora é só! \
         ");
     } else{
