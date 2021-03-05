@@ -89,7 +89,7 @@ client.on("message", (message) => {
         "obrigado": () => message.reply("de nada, agora deixai o Pai descansar."),
         "obrigado!": () => message.reply("de nada, agora deixai o Pai descansar."),
         "quem": () => {
-            if(args[1] !== null){
+            if(args[1] !== undefined){
                 const tudo = command + " " + args[0].toLowerCase() + " " + args[1].toLowerCase();
     
                 if(tudo === "quem te criou?")
@@ -114,14 +114,14 @@ client.on("message", (message) => {
         },
         "adeus": () => message.reply("vais embora tão cedo?"),
         "volta": () => {
-            if(args[2] !== null)
+            if(args[2] !== undefined)
             {
                 const tudo = command + " " + args[0].toLowerCase() + " " + args[1].toLowerCase() + " " + args[2].toLowerCase();
                 if(tudo === "volta para o ceu"){
                     state = false;
                     message.reply("Quando me quiserem de volta digam: «volta a terra»");
                 }
-            }else if(args[1] !== null){
+            }else if(args[1] !== undefined){
                 const tudo = command + " " + args[0].toLowerCase() + " " + args[1].toLowerCase();
                 if(tudo === "volta a terra"){
                     state = true;
