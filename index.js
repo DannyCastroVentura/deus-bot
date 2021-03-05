@@ -19,7 +19,7 @@ const pilas = ['pixa', 'pila', 'caralho', 'picha'];
 const conas = ['cona', 'kona', 'pussy', 'paxaxa', 'paxaxinha', 'grelo'];
 const ofensa = ['gay', 'homosexual', 'paneleiro', 'lesbica'];
 const perdao = ['desculpa', 'perdão'];
-const badalhoquices = ['boobs', 'ass', 'porn', 'tits'];
+const badalhoquices = ['boobs', 'ass', 'porn', 'tits', 'booty'];
 
 client.on("message", (message) => {
 
