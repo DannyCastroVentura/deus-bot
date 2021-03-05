@@ -15,7 +15,7 @@ const client = new Discord.Client();
 const prefix = "DEUS ";
 
 client.on("message", (message) => {
-        
+
     const mensagem = message.toString().toLowerCase();
     if(mensagem.includes("merda") || mensagem.includes("chupaimos") || mensagem.includes("puta") || mensagem.includes("cabra") || mensagem.includes("vaca") || mensagem.includes("fodasse") || mensagem.includes("foder") || mensagem.includes("fuder") || mensagem.includes("cabrão")){
         //asneiras
@@ -99,4 +99,5 @@ if(Config)
     client.login(process.env.discord_key);
 }
 
+// faz o mesmo que em cima, basicamente é um if no Config, se for true faz o primeiro, se for false faz o que esta depois dos : 
 //client.login(Config?Config.BOT_TOKEN:process.env.discord_key);
