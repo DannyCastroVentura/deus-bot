@@ -14,22 +14,28 @@ const client = new Discord.Client();
 
 const prefix = "DEUS ";
 
+const asneiras = ['merda', 'chupaimos', 'puta', 'cabra', 'vaca', 'fodasse', 'foder', 'fuder', 'cabrão'];
+const pilas = ['pixa', 'pila', 'caralho', 'picha'];
+const conas = ['cona', 'kona', 'pussy', 'paxaxa', 'paxaxinha', 'grelo'];
+const ofensa = ['gay', 'homosexual', 'paneleiro', 'lesbica'];
+const perdao = ['desculpa', 'perdão'];
+
 client.on("message", (message) => {
 
     const mensagem = message.toString().toLowerCase();
-    if(mensagem.includes("merda") || mensagem.includes("chupaimos") || mensagem.includes("puta") || mensagem.includes("cabra") || mensagem.includes("vaca") || mensagem.includes("fodasse") || mensagem.includes("foder") || mensagem.includes("fuder") || mensagem.includes("cabrão")){
+    if(asneiras.find(v => (mensagem.includes(v))) !== undefined){
         //asneiras
         message.reply("não se diz asneiras...");
-    }else if(mensagem.includes("pixa") || mensagem.includes("pila") || mensagem.includes("caralho") || mensagem.includes("picha")){
+    }else if(pilas.find(v => (mensagem.includes(v))) !== undefined){
         //pilas
         message.reply("diz-se pénis.");
-    }else if(mensagem.includes("cona") || mensagem.includes("kona") || mensagem.includes("pussy") || mensagem.includes("paxaxa") || mensagem.includes("paxaxinha") || mensagem.includes("grelo")){
+    }else if(conas.find(v => (mensagem.includes(v))) !== undefined){
         //conas
         message.reply("diz-se vagina.");
-    }else if(mensagem.includes("gay") || mensagem.includes("homosexual") || mensagem.includes("paneleiro") || mensagem.includes("lesbica")){
-        // homofobia
+    }else if(ofensa.find(v => (mensagem.includes(v))) !== undefined){
+        // ofensa
         message.reply("quem diz é quem é.");
-    }else if(mensagem.includes("desculpa") || mensagem.includes("perdão")){
+    }else if(perdao.find(v => (mensagem.includes(v))) !== undefined){
         //perdão
         message.reply("estás perdoado.");
     }else if(mensagem.includes("deus")){
