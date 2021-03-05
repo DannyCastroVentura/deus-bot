@@ -18,13 +18,20 @@ client.on("message", (message) => {
     
     const mensagem = message.toString().toLowerCase();
     if(mensagem.includes("caralho") || mensagem.includes("merda") || mensagem.includes("chupaimos") || mensagem.includes("puta") || mensagem.includes("cabra") || mensagem.includes("vaca") || mensagem.includes("fodasse") || mensagem.includes("foder") || mensagem.includes("fuder") || mensagem.includes("cabrão")){
-        message.reply("filho, não digas asneiras :shushing_face: ");
+        //asneiras
+        message.reply("não se diz asneiras...");
     }else if(mensagem.includes("pixa") || mensagem.includes("pila") || mensagem.includes("caralho") || mensagem.includes("picha")){
-        message.reply("filho, diz-se pénis. :neutral_face: ");
+        //pilas
+        message.reply("diz-se pénis.");
     }else if(mensagem.includes("cona") || mensagem.includes("kona") || mensagem.includes("pussy") || mensagem.includes("paxaxa") || mensagem.includes("paxaxinha") || mensagem.includes("grelo")){
-        message.reply("filho, diz-se vagina. :neutral_face: ");
-    }else if(mensagem.includes("desculpa")){
-        message.reply("estás perdoado. ")
+        //conas
+        message.reply("diz-se vagina.");
+    }else if(mensagem.includes("gay") || mensagem.includes("homosexual") || mensagem.includes("paneleiro") || mensagem.includes("lesbica")){
+        // homofobia
+        message.reply("quem diz é quem é.");
+    }else if(mensagem.includes("desculpa") || mensagem.includes("perdão")){
+        //perdão
+        message.reply("estás perdoado.");
     }
 
     if(message.author.bot) return;
@@ -65,6 +72,8 @@ client.on("message", (message) => {
             }
 
         }
+    } else if(command === "adeus") {
+        message.reply("vais embora tão cedo?");
     } else if(command === "ajudai") {
         message.reply("meu filho, eu ajudar-te-ei nisto:\n \
         Posso te mostrar o teu ping: «ping»;\n \
