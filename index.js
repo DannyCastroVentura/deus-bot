@@ -16,8 +16,6 @@ const prefix = "DEUS ";
 
 let state = true;
 
-console.log("Started");
-
 const asneiras = ['merda', 'chupaimos', 'puta', 'cabra', 'vaca', 'fodasse', 'foder', 'fuder', 'cabrão', 'crl', 'mrd', 'fodo'];
 const pilas = ['pixa', 'pila', 'caralho', 'picha'];
 const conas = ['cona', 'kona', 'pussy', 'paxaxa', 'paxaxinha', 'grelo'];
@@ -28,6 +26,7 @@ const respostasAoDunkMemer = ['pls boobs', 'pls ass', 'pls porn', 'pls tits', 'p
 client.on("message", (message) => {
 
     const mensagem = message.toString().toLowerCase();
+    console.log(mensagem);
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
@@ -118,18 +117,23 @@ client.on("message", (message) => {
             if(args[2] !== undefined)
             {
                 const tudo = command + " " + args[0].toLowerCase() + " " + args[1].toLowerCase() + " " + args[2].toLowerCase();
+                console.log(tudo);
                 if(tudo === "volta para o ceu"){
                     state = false;
                     message.reply("Quando me quiserem de volta digam: «volta a terra»");
                 }
             }else if(args[1] !== undefined){
                 const tudo = command + " " + args[0].toLowerCase() + " " + args[1].toLowerCase();
+                console.log(tudo);
                 if(tudo === "volta a terra"){
                     state = true;
                     message.reply("voltei, o que desejas filho meu?");
                 }
             }
             
+        },
+        "biblia": () => {
+            fetch('https://beta.ourmanna.com/api/v1/get/?format=json&order=random').then(data =>data.json()).then(data =>message.reply(data.verse.details.text))
         },
         "ajudai": () => {
             message.reply("meu filho, eu ajudar-te-ei nisto:\n \
