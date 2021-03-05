@@ -28,7 +28,7 @@ client.on("message", (message) => {
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
-
+    message.reply(command);
     if(!state && command !== "volta a terra")
     {
         return;
