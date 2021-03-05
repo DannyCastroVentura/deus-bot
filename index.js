@@ -19,7 +19,7 @@ const pilas = ['pixa', 'pila', 'caralho', 'picha'];
 const conas = ['cona', 'kona', 'pussy', 'paxaxa', 'paxaxinha', 'grelo'];
 const ofensa = ['gay', 'homosexual', 'paneleiro', 'lesbica'];
 const perdao = ['desculpa', 'perdão'];
-const badalhoquices = ['boobs', 'ass', 'porn', 'tits', 'booty'];
+const respostasAoDunkMemer = ['pls boobs', 'pls ass', 'pls porn', 'pls tits', 'pls booty'];
 
 client.on("message", (message) => {
 
@@ -45,8 +45,8 @@ client.on("message", (message) => {
     }else if(perdao.find(v => (mensagem.includes(v))) !== undefined){
         //perdão
         tiposDeMensagens = ['estás perdoado.', 'vou pensar.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
-    }else if(badalhoquices.find(v => (mensagem.includes(v))) !== undefined){
-        //badalhoquices
+    }else if(respostasAoDunkMemer.find(v => (mensagem.includes(v))) !== undefined){
+        //respostas Ao Dunk Memer
         tiposDeMensagens = [':eyes:', 'filho deixa disso.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
     }else if(mensagem.includes("deus") && (!comecaComPrefixo)){
         //deus
