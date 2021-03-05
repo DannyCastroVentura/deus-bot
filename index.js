@@ -23,30 +23,38 @@ const badalhoquices = ['boobs', 'ass', 'porn', 'tits', 'booty'];
 
 client.on("message", (message) => {
 
+    const numeroDaMensagem = Math.round( Math.random() * 2 );
     const comecaComPrefixo = message.content.startsWith(prefix);
 
     const mensagem = message.toString().toLowerCase();
+
+    let tiposDeMensagens = [];
+
     if(asneiras.find(v => (mensagem.includes(v))) !== undefined){
         //asneiras
-        message.reply("não se diz asneiras...");
+        tiposDeMensagens = ['não se diz asneiras...', 'tento nessa língua...', 'não foi assim que te eduquei'];        
     }else if(pilas.find(v => (mensagem.includes(v))) !== undefined){
         //pilas
-        message.reply("diz-se pénis.");
+        tiposDeMensagens = ['diz-se pénis.', 'pénis queres tu dizer.', 'tento nessa língua...'];
     }else if(conas.find(v => (mensagem.includes(v))) !== undefined){
         //conas
-        message.reply("diz-se vagina.");
+        tiposDeMensagens = ['diz-se vagina.', 'vagina queres tu dizer.', 'tento nessa língua...'];
     }else if(ofensa.find(v => (mensagem.includes(v))) !== undefined){
         // ofensa
-        message.reply("quem diz é quem é.");
+        tiposDeMensagens = ['quem diz é quem é.', 'filho deixa disso.', ':neutral_face:'];
     }else if(perdao.find(v => (mensagem.includes(v))) !== undefined){
         //perdão
-        message.reply("estás perdoado.");
+        tiposDeMensagens = ['estás perdoado.', 'vou pensar.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
     }else if(badalhoquices.find(v => (mensagem.includes(v))) !== undefined){
         //badalhoquices
-        message.reply(":eyes:");
+        tiposDeMensagens = [':eyes:', 'filho deixa disso.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
     }else if(mensagem.includes("deus") && (!comecaComPrefixo)){
         //deus
         message.reply("chamaste?");
+    }
+
+    if(tiposDeMensagens.length !== 0){
+        message.reply(tiposDeMensagens[numeroDaMensagem]);
     }
 
     if(message.author.bot) return;
