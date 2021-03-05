@@ -2,7 +2,7 @@
 let Config;
 
 try{
-    Config = require("./config.json");
+    Config = require("./config/config.json");
 }catch(err)
 {
     Config = undefined;
