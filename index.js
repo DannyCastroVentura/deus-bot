@@ -14,6 +14,8 @@ const client = new Discord.Client();
 
 const prefix = "DEUS ";
 
+let state = true;
+
 const asneiras = ['merda', 'chupaimos', 'puta', 'cabra', 'vaca', 'fodasse', 'foder', 'fuder', 'cabrão', 'crl', 'mrd'];
 const pilas = ['pixa', 'pila', 'caralho', 'picha'];
 const conas = ['cona', 'kona', 'pussy', 'paxaxa', 'paxaxinha', 'grelo'];
@@ -22,6 +24,15 @@ const perdao = ['desculpa', 'perdão'];
 const respostasAoDunkMemer = ['pls boobs', 'pls ass', 'pls porn', 'pls tits', 'pls booty'];
 
 client.on("message", (message) => {
+
+    const commandBody = message.content.slice(prefix.length);
+    const args = commandBody.split(' ');
+    const command = args.shift().toLowerCase();
+
+    if(!state && command !== "volta a terra")
+    {
+        return;
+    }
 
     const numeroDaMensagem = Math.round( Math.random() * 2 );
     const comecaComPrefixo = message.content.startsWith(prefix);
@@ -61,9 +72,6 @@ client.on("message", (message) => {
     if(!comecaComPrefixo) return;
     
 
-    const commandBody = message.content.slice(prefix.length);
-    const args = commandBody.split(' ');
-    const command = args.shift().toLowerCase();
 
 
     const commands = {
@@ -104,6 +112,14 @@ client.on("message", (message) => {
             message.reply(novaString);
         },
         "adeus": () => message.reply("vais embora tão cedo?"),
+        "volta para o céu": () => {
+            state = false;
+            message.reply("Quando me quiserem de volta digam: «volta a terra»");
+        },
+        "volta a terra": () => {
+            state = true;
+            message.reply("Quando me quiserem de volta digam: «volta a terra»");
+        },
         "ajudai": () => {
             message.reply("meu filho, eu ajudar-te-ei nisto:\n \
             Posso te mostrar o teu ping: «ping»;\n \
