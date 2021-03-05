@@ -100,7 +100,9 @@ client.on("message", (message) => {
             }
         },
         "diz": () => {
-            message.reply(commandBody);
+            args.shift();
+            args = args.join(" ");
+            message.reply(args);
         },
         "adeus": () => message.reply("vais embora tão cedo?"),
         "ajudai": () => {
