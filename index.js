@@ -53,10 +53,10 @@ client.on("message", (message) => {
     }else if(arrays.ofensa.find(v => (mensagem.includes(v))) !== undefined){
         // ofensa
         tiposDeMensagens = ['quem diz é quem é.', 'filho deixa disso.', ':neutral_face:'];
-    }else if(module.perdao.find(v => (mensagem.includes(v))) !== undefined){
+    }else if(arrays.perdao.find(v => (mensagem.includes(v))) !== undefined){
         //perdão
         tiposDeMensagens = ['estás perdoado.', 'vou pensar.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
-    }else if(module.respostasAoDunkMemer.find(v => (mensagem.includes(v))) !== undefined){
+    }else if(arrays.respostasAoDunkMemer.find(v => (mensagem.includes(v))) !== undefined){
         //respostas Ao Dunk Memer
         tiposDeMensagens = [':eyes:', 'filho deixa disso.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
     }else if(mensagem.includes("deus") && (!comecaComPrefixo)){
