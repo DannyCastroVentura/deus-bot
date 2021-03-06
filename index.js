@@ -65,7 +65,6 @@ client.on("message", (message) => {
 
     if(tiposDeMensagens.length !== 0){
         const numeroDaMensagem = Math.round( Math.random() * (tiposDeMensagens.length - 1) );
-        console.log(tiposDeMensagens.length-1);
         message.reply(tiposDeMensagens[numeroDaMensagem]);
     }
 
