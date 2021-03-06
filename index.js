@@ -30,6 +30,7 @@ client.on("message", (message) => {
     const command = args.shift().toLowerCase();
     const comecaComPrefixo = message.content.startsWith(prefix);
     
+    let esperar = false;
     
     // if(!state && (mensagem !== "deus volta a terra"))
     // {
@@ -57,10 +58,8 @@ client.on("message", (message) => {
         tiposDeMensagens = arrays.respostasPerdao;
     }else if(arrays.interacaoAoDunkMemer.find(v => (mensagem.includes(v))) !== undefined){
         //respostas Ao Dunk Memer
-        setTimeout(() => {
-            tiposDeMensagens = arrays.respostasInteracaoAoDunkMemer;
-        },2000);
-        
+        esperar = true;
+        tiposDeMensagens = arrays.respostasInteracaoAoDunkMemer;        
 
     }else if(mensagem.includes("deus") && (!comecaComPrefixo)){
         //deus
@@ -69,7 +68,12 @@ client.on("message", (message) => {
 
     if(tiposDeMensagens.length !== 0){
         const numeroDaMensagem = Math.round( Math.random() * (tiposDeMensagens.length - 1) );
-        message.reply(tiposDeMensagens[numeroDaMensagem]);
+        if(esperar)
+        {
+            setTimeout(message.reply(tiposDeMensagens[numeroDaMensagem]),2000);
+        }else{
+            message.reply(tiposDeMensagens[numeroDaMensagem]);
+        }
     }
 
     if(message.author.bot) return;
