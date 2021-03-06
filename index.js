@@ -28,43 +28,43 @@ client.on("message", (message) => {
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
-    
-    /*
-    if(!state && (mensagem !== "deus volta a terra"))
-    {
-        return;
-    }
-    */
-    const numeroDaMensagem = Math.round( Math.random() * 2 );
     const comecaComPrefixo = message.content.startsWith(prefix);
+    
+    
+    // if(!state && (mensagem !== "deus volta a terra"))
+    // {
+    //     return;
+    // }
+    
 
 
     let tiposDeMensagens = [];
 
     if(arrays.asneiras.find(v => (mensagem.includes(v))) !== undefined){
         //asneiras
-        tiposDeMensagens = ['não se diz asneiras...', 'tento nessa língua...', 'não foi assim que te eduquei'];        
+        tiposDeMensagens = arrays.respostasAsneiras;
     }else if(arrays.pilas.find(v => (mensagem.includes(v))) !== undefined){
         //pilas
-        tiposDeMensagens = ['diz-se pénis.', 'pénis queres tu dizer.', 'tento nessa língua...'];
+        tiposDeMensagens = arrays.respostasPilas;
     }else if(arrays.conas.find(v => (mensagem.includes(v))) !== undefined){
         //conas
-        tiposDeMensagens = ['diz-se vagina.', 'vagina queres tu dizer.', 'tento nessa língua...'];
+        tiposDeMensagens = arrays.respostasConas;
     }else if(arrays.ofensa.find(v => (mensagem.includes(v))) !== undefined){
         // ofensa
-        tiposDeMensagens = ['quem diz é quem é.', 'filho deixa disso.', ':neutral_face:'];
+        tiposDeMensagens = arrays.respostasOfensa;
     }else if(arrays.perdao.find(v => (mensagem.includes(v))) !== undefined){
-        //perdão
-        tiposDeMensagens = ['estás perdoado.', 'vou pensar.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
-    }else if(arrays.respostasAoDunkMemer.find(v => (mensagem.includes(v))) !== undefined){
+        //perdão        
+        tiposDeMensagens = arrays.respostasPerdao;
+    }else if(arrays.interacaoAoDunkMemer.find(v => (mensagem.includes(v))) !== undefined){
         //respostas Ao Dunk Memer
-        tiposDeMensagens = [':eyes:', 'filho deixa disso.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
+        tiposDeMensagens = arrays.respostasInteracaoAoDunkMemer;
     }else if(mensagem.includes("deus") && (!comecaComPrefixo)){
         //deus
         message.reply("chamaste?");
     }
 
     if(tiposDeMensagens.length !== 0){
+        const numeroDaMensagem = Math.round( Math.random() * (tiposDeMensagens.length - 1) );
         message.reply(tiposDeMensagens[numeroDaMensagem]);
     }
 
@@ -72,9 +72,12 @@ client.on("message", (message) => {
     if(!comecaComPrefixo) return;
 
     
-    const commands = require("./lib/commands")(message, args, command/*, (newState) => {
-        state = newState;
-    }*/);
+    const commands = require("./lib/commands")(message, args, command);
+
+    
+    // const commands = require("./lib/commands")(message, args, command, (newState) => {
+    //     state = newState;
+    // });
 
     if(Object.keys(commands).includes(command))
     {
