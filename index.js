@@ -1,11 +1,13 @@
+let BOT_TOKEN, api_key;
 
 try{
-    let {BOT_TOKEN, api_key} = require("./config/config.json");
-
+    let configs = require("./config/config.json");
+    BOT_TOKEN = configs.BOT_TOKEN;
+    api_key = configs.api_key;
 }catch(err)
 {
-    let BOT_TOKEN = process.env.discord_key;
-    let api_key = process.env.api_key;
+    BOT_TOKEN = process.env.discord_key;
+    api_key = process.env.api_key;
 }
 
 
