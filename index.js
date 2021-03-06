@@ -20,12 +20,7 @@ const prefix = "DEUS ";
 
 console.log("Started");
 
-const asneiras = ['merda', 'chupaimos', 'puta', 'cabra', 'vaca', 'fodasse', 'foder', 'fuder', 'cabrão', 'crl', 'mrd', 'fodo'];
-const pilas = ['pixa', 'pila', 'caralho', 'picha'];
-const conas = ['cona', 'kona', 'pussy', 'paxaxa', 'paxaxinha', 'grelo'];
-const ofensa = ['gay', 'homosexual', 'paneleiro', 'lesbica'];
-const perdao = ['desculpa', 'perdão'];
-const respostasAoDunkMemer = ['pls boobs', 'pls ass', 'pls porn', 'pls tits', 'pls booty'];
+const arrays = require("./lib/arrays");
 
 client.on("message", (message) => {
 
@@ -46,22 +41,22 @@ client.on("message", (message) => {
 
     let tiposDeMensagens = [];
 
-    if(asneiras.find(v => (mensagem.includes(v))) !== undefined){
+    if(arrays.asneiras.find(v => (mensagem.includes(v))) !== undefined){
         //asneiras
         tiposDeMensagens = ['não se diz asneiras...', 'tento nessa língua...', 'não foi assim que te eduquei'];        
-    }else if(pilas.find(v => (mensagem.includes(v))) !== undefined){
+    }else if(arrays.pilas.find(v => (mensagem.includes(v))) !== undefined){
         //pilas
         tiposDeMensagens = ['diz-se pénis.', 'pénis queres tu dizer.', 'tento nessa língua...'];
-    }else if(conas.find(v => (mensagem.includes(v))) !== undefined){
+    }else if(arrays.conas.find(v => (mensagem.includes(v))) !== undefined){
         //conas
         tiposDeMensagens = ['diz-se vagina.', 'vagina queres tu dizer.', 'tento nessa língua...'];
-    }else if(ofensa.find(v => (mensagem.includes(v))) !== undefined){
+    }else if(arrays.ofensa.find(v => (mensagem.includes(v))) !== undefined){
         // ofensa
         tiposDeMensagens = ['quem diz é quem é.', 'filho deixa disso.', ':neutral_face:'];
-    }else if(perdao.find(v => (mensagem.includes(v))) !== undefined){
+    }else if(module.perdao.find(v => (mensagem.includes(v))) !== undefined){
         //perdão
         tiposDeMensagens = ['estás perdoado.', 'vou pensar.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
-    }else if(respostasAoDunkMemer.find(v => (mensagem.includes(v))) !== undefined){
+    }else if(module.respostasAoDunkMemer.find(v => (mensagem.includes(v))) !== undefined){
         //respostas Ao Dunk Memer
         tiposDeMensagens = [':eyes:', 'filho deixa disso.', 'espero que gostes de calor, quando faleceres vais para um lugar bem quentinho...'];
     }else if(mensagem.includes("deus") && (!comecaComPrefixo)){
