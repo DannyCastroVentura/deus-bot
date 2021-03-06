@@ -22,6 +22,12 @@ console.log("Started");
 
 const arrays = require("./lib/arrays");
 
+function delay (message, mensagem){
+    setTimeout(() => {
+        message.reply(mensagem);
+    },1000);
+}
+
 client.on("message", (message) => {
 
     const mensagem = message.toString().toLowerCase();
@@ -68,10 +74,9 @@ client.on("message", (message) => {
 
     if(tiposDeMensagens.length !== 0){
         const numeroDaMensagem = Math.round( Math.random() * (tiposDeMensagens.length - 1) );
-        console.log(esperar);
         if(esperar)
         {
-            setTimeout(message.reply(tiposDeMensagens[numeroDaMensagem]),100);
+            delay(message, tiposDeMensagens[numeroDaMensagem]);
         }else{
             message.reply(tiposDeMensagens[numeroDaMensagem]);
         }
