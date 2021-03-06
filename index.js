@@ -30,7 +30,7 @@ function delay (message, mensagem){
 
 client.on("message", (message) => {
 
-    // console.log(message.author);
+    console.log(message.channel);
     const mensagem = message.toString().toLowerCase();
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
@@ -45,12 +45,8 @@ client.on("message", (message) => {
     // }
     
 
-    // // enviar ficheiros
-    // bot.on('message' message => {
-    //     message.channel.send("My Bot's message", {files: ["https://i.imgur.com/XxxXxXX.jpg"]});
-    // });
-
-    // link meme generator api: https://meme-api.herokuapp.com/gimme
+    // gif de abilitar primeiro no canal
+    // https://i.imgur.com/oe4iK5i.gif
 
     let tiposDeMensagens = [];
 
