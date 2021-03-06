@@ -1,11 +1,11 @@
 
-let Config;
-
 try{
-    Config = require("./config/config.json");
+    let {BOT_TOKEN, api_key} = require("./config/config.json");
+
 }catch(err)
 {
-    Config = undefined;
+    let BOT_TOKEN = process.env.discord_key;
+    let api_key = process.env.api_key;
 }
 
 
@@ -89,7 +89,7 @@ client.on("message", (message) => {
     if(!comecaComPrefixo) return;
 
     
-    const commands = require("./lib/commands")(message, args, command);
+    const commands = require("./lib/commands")(message, args, command, api_key);
 
     
     // const commands = require("./lib/commands")(message, args, command, (newState) => {
@@ -105,12 +105,7 @@ client.on("message", (message) => {
     }
 });
 
-if(Config)
-{
-    client.login(Config.BOT_TOKEN);
-}else{
-    client.login(process.env.discord_key);
-}
+client.login(BOT_TOKEN);
 
 // faz o mesmo que em cima, basicamente é um if no Config, se for true faz o primeiro, se for false faz o que esta depois dos : 
 //client.login(Config?Config.BOT_TOKEN:process.env.discord_key);
