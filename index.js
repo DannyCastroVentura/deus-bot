@@ -30,6 +30,7 @@ function delay (message, mensagem){
 
 client.on("message", (message) => {
 
+    console.log(message.author);
     const mensagem = message.toString().toLowerCase();
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
