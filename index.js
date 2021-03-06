@@ -30,7 +30,7 @@ function delay (message, mensagem){
 
 client.on("message", (message) => {
 
-    console.log(message.channel.nsfw);
+    // console.log(message.channel.nsfw);
     const mensagem = message.toString().toLowerCase();
     const commandBody = message.content.slice(prefix.length);
     const args = commandBody.split(' ');
