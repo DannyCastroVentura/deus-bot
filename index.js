@@ -68,9 +68,10 @@ client.on("message", (message) => {
 
     if(tiposDeMensagens.length !== 0){
         const numeroDaMensagem = Math.round( Math.random() * (tiposDeMensagens.length - 1) );
+        console.log(esperar);
         if(esperar)
         {
-            setTimeout(message.reply(tiposDeMensagens[numeroDaMensagem]),2000);
+            setTimeout(message.reply(tiposDeMensagens[numeroDaMensagem]),1000);
         }else{
             message.reply(tiposDeMensagens[numeroDaMensagem]);
         }
