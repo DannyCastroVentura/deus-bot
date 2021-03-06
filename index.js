@@ -45,6 +45,12 @@ client.on("message", (message) => {
     // }
     
 
+    // // enviar ficheiros
+    // bot.on('message' message => {
+    //     message.channel.send("My Bot's message", {files: ["https://i.imgur.com/XxxXxXX.jpg"]});
+    // });
+
+    // link meme generator api: https://meme-api.herokuapp.com/gimme
 
     let tiposDeMensagens = [];
 
