@@ -71,7 +71,7 @@ client.on("message", (message) => {
         console.log(esperar);
         if(esperar)
         {
-            setTimeout(message.reply(tiposDeMensagens[numeroDaMensagem]),1000);
+            setTimeout(message.reply(tiposDeMensagens[numeroDaMensagem]),100);
         }else{
             message.reply(tiposDeMensagens[numeroDaMensagem]);
         }
