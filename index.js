@@ -57,7 +57,11 @@ client.on("message", (message) => {
         tiposDeMensagens = arrays.respostasPerdao;
     }else if(arrays.interacaoAoDunkMemer.find(v => (mensagem.includes(v))) !== undefined){
         //respostas Ao Dunk Memer
-        tiposDeMensagens = arrays.respostasInteracaoAoDunkMemer;
+        setTimeout(() => {
+            tiposDeMensagens = arrays.respostasInteracaoAoDunkMemer;
+        },2000);
+        
+
     }else if(mensagem.includes("deus") && (!comecaComPrefixo)){
         //deus
         message.reply("chamaste?");
