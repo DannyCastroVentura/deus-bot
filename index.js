@@ -1,3 +1,4 @@
+
 let BOT_TOKEN, api_key;
 
 try{
@@ -9,7 +10,6 @@ try{
     BOT_TOKEN = process.env.discord_key;
     api_key = process.env.api_key;
 }
-
 
 
 const Discord = require("discord.js");
